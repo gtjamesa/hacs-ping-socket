@@ -1,0 +1,5 @@
+{
+  "name": "Ping (Socket)",
+  "domains": ["binary_sensor"],
+  "render_readme": true
+}
