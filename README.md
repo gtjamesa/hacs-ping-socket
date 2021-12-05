@@ -1,8 +1,7 @@
 # Ping (Socket) Binary Sensor for Home Assistant
 
 ![beta_badge](https://img.shields.io/badge/maturity-Beta-yellow.png)
-![release_badge](https://img.shields.io/github/release/gtjamesa/hacs-ping-socket.svg)
-![release_date](https://img.shields.io/github/release-date/gtjamesa/hacs-ping-socket.svg)
+![release_badge](https://img.shields.io/github/v/release/gtjamesa/hacs-ping-socket)
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
