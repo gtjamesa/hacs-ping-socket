@@ -13,6 +13,7 @@
 * Asynchronous handling to not block HA startup if your target host is down
 * Correctly updates binary sensor status to `on`/`off` based on whether the host could be contacted
 * Updates `available` status to let you know whether the integration has yet attempted to contact the target host
+* SSL options removed as they were not required for my use case (will not be part of PR)
 
 ## Installation
 
@@ -20,15 +21,27 @@ Make sure [Home Assistant Community Store (HACS)](https://github.com/custom-comp
 
 ### Configuration
 
-The bare minimum configuration creates general sensors to track the Helium blockchange, notably the HNT/USD Oracle price.
+The configuration is the same as a TCP sensor. Below is an example configuration to monitor whether the 44158 port is running on a Helium Bobcat Miner 300:
 
 ```yaml
 binary_sensor:
-  - platform: ping_socket
+    - platform: ping_socket
       host: 192.168.200.213
       port: 44158
       value_on: "\x13/multistream/1.0.0\n"
       scan_interval: 300
       name: Bobcat Helium Miner
 ```
+
+#### Configuration Variables
+
+| Name             | Type    | Required?                                                    |
+| ---------------- | ------- | ------------------------------------------------------------ |
+| `name`           | string  | optional                                                     |
+| `host`           | string  | required                                                     |
+| `port`           | integer | required                                                     |
+| `payload`        | string  | optional                                                     |
+| `timeout`        | integer | optional (default: `10`)                                     |
+| `value_template` | string  | optional - see [template](https://www.home-assistant.io/docs/configuration/templating/#processing-incoming-data) |
+| `buffer_size`    | integer | optional (default: `1024`)                                   |
 
