@@ -38,10 +38,11 @@ binary_sensor:
 | Name             | Type    | Required?                                                    |
 | ---------------- | ------- | ------------------------------------------------------------ |
 | `name`           | string  | optional                                                     |
-| `host`           | string  | required                                                     |
-| `port`           | integer | required                                                     |
+| `host`           | string  | <u>required</u>                                              |
+| `port`           | integer | <u>required</u>                                              |
 | `payload`        | string  | optional                                                     |
 | `timeout`        | integer | optional (default: `10`)                                     |
+| `value_on`       | string  | optional                                                     |
 | `value_template` | string  | optional - see [template](https://www.home-assistant.io/docs/configuration/templating/#processing-incoming-data) |
 | `buffer_size`    | integer | optional (default: `1024`)                                   |
 
